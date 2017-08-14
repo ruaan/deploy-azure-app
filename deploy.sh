@@ -111,6 +111,10 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   bundle install --path "vendor/bundle" $OPTIONS
   echo "Running bundle package"
   bundle package --all
+  echo "DB reset"
+  rake db:reset
+  echo "Migrations"
+  rake db:migrate
   exitWithMessageOnError "bundler failed"
   if [ "$ASSETS_PRECOMPILE" == true ]; then 
 	echo "running rake assets:precompile"
