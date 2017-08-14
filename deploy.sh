@@ -112,7 +112,8 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
   echo "Running bundle package"
   bundle package --all
   echo "DB reset"
-  bundle exec rake db:reset
+  bundle exec rake db:drop
+  bundle exec rake db:create
   echo "Migrations"
   bundle exec rake db:migrate
   exitWithMessageOnError "bundler failed"
