@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Passengername:</strong>
+  <%= @boardingpass.passengerName %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @boardingpass.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @boardingpass.destination %>
+</p>
+
+<p>
+  <strong>Seat:</strong>
+  <%= @boardingpass.seat %>
+</p>
+
+<p>
+  <strong>Gate:</strong>
+  <%= @boardingpass.gate %>
+</p>
+
+<p>
+  <strong>Flight:</strong>
+  <%= @boardingpass.flight %>
+</p>
+
+<p>
+  <strong>Boardingtime:</strong>
+  <%= @boardingpass.boardingTime %>
+</p>
+
+<p>
+  <strong>Boardingdate:</strong>
+  <%= @boardingpass.boardingDate %>
+</p>
+
+<p>
+  <strong>Eticket:</strong>
+  <%= @boardingpass.eticket %>
+</p>
+
+<p>
+  <strong>Ticketclass:</strong>
+  <%= @boardingpass.ticketClass %>
+</p>
+
+<p>
+  <strong>Bookingref:</strong>
+  <%= @boardingpass.bookingRef %>
+</p>
+
+<p>
+  <strong>Frequentflyernumber:</strong>
+  <%= @boardingpass.frequentFlyerNumber %>
+</p>
+
+<p>
+  <strong>Sequence:</strong>
+  <%= @boardingpass.sequence %>
+</p>
+
+<%= link_to 'Edit', edit_boardingpass_path(@boardingpass) %> |
+<%= link_to 'Back', boardingpasses_path %>

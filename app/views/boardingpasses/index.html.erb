@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Boardingpasses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Passengername</th>
+      <th>Origin</th>
+      <th>Destination</th>
+      <th>Seat</th>
+      <th>Gate</th>
+      <th>Flight</th>
+      <th>Boardingtime</th>
+      <th>Boardingdate</th>
+      <th>Eticket</th>
+      <th>Ticketclass</th>
+      <th>Bookingref</th>
+      <th>Frequentflyernumber</th>
+      <th>Sequence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boardingpasses.each do |boardingpass| %>
+      <tr>
+        <td><%= boardingpass.passengerName %></td>
+        <td><%= boardingpass.origin %></td>
+        <td><%= boardingpass.destination %></td>
+        <td><%= boardingpass.seat %></td>
+        <td><%= boardingpass.gate %></td>
+        <td><%= boardingpass.flight %></td>
+        <td><%= boardingpass.boardingTime %></td>
+        <td><%= boardingpass.boardingDate %></td>
+        <td><%= boardingpass.eticket %></td>
+        <td><%= boardingpass.ticketClass %></td>
+        <td><%= boardingpass.bookingRef %></td>
+        <td><%= boardingpass.frequentFlyerNumber %></td>
+        <td><%= boardingpass.sequence %></td>
+        <td><%= link_to 'Show', boardingpass %></td>
+        <td><%= link_to 'Edit', edit_boardingpass_path(boardingpass) %></td>
+        <td><%= link_to 'Destroy', boardingpass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Boardingpass', new_boardingpass_path %>

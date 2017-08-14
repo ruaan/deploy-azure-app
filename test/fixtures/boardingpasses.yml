@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  passengerName: MyString
+  origin: MyString
+  destination: MyString
+  seat: MyString
+  gate: MyString
+  flight: MyString
+  boardingTime: MyString
+  boardingDate: MyString
+  eticket: MyString
+  ticketClass: MyString
+  bookingRef: MyString
+  frequentFlyerNumber: MyString
+  sequence: 1
+
+two:
+  passengerName: MyString
+  origin: MyString
+  destination: MyString
+  seat: MyString
+  gate: MyString
+  flight: MyString
+  boardingTime: MyString
+  boardingDate: MyString
+  eticket: MyString
+  ticketClass: MyString
+  bookingRef: MyString
+  frequentFlyerNumber: MyString
+  sequence: 1

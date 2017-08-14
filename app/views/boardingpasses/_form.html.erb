@@ -1,0 +1,82 @@
+<%= form_with(model: boardingpass, local: true) do |form| %>
+  <% if boardingpass.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(boardingpass.errors.count, "error") %> prohibited this boardingpass from being saved:</h2>
+
+      <ul>
+      <% boardingpass.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :passengerName %>
+    <%= form.text_field :passengerName, id: :boardingpass_passengerName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :origin %>
+    <%= form.text_field :origin, id: :boardingpass_origin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :destination %>
+    <%= form.text_field :destination, id: :boardingpass_destination %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seat %>
+    <%= form.text_field :seat, id: :boardingpass_seat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gate %>
+    <%= form.text_field :gate, id: :boardingpass_gate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flight %>
+    <%= form.text_field :flight, id: :boardingpass_flight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boardingTime %>
+    <%= form.text_field :boardingTime, id: :boardingpass_boardingTime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boardingDate %>
+    <%= form.text_field :boardingDate, id: :boardingpass_boardingDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eticket %>
+    <%= form.text_field :eticket, id: :boardingpass_eticket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ticketClass %>
+    <%= form.text_field :ticketClass, id: :boardingpass_ticketClass %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bookingRef %>
+    <%= form.text_field :bookingRef, id: :boardingpass_bookingRef %>
+  </div>
+
+  <div class="field">
+    <%= form.label :frequentFlyerNumber %>
+    <%= form.text_field :frequentFlyerNumber, id: :boardingpass_frequentFlyerNumber %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sequence %>
+    <%= form.number_field :sequence, id: :boardingpass_sequence %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
