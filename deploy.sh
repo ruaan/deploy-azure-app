@@ -115,7 +115,7 @@ if [ -e "$DEPLOYMENT_TARGET/Gemfile" ]; then
  
   
   echo "Migrations"
-  bundle exec rake db:migrate
+  #bundle exec rake db:migrate
   exitWithMessageOnError "bundler failed"
   if [ "$ASSETS_PRECOMPILE" == true ]; then 
 	echo "running rake assets:precompile"
